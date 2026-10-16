@@ -1,0 +1,16 @@
+# CogWorm Experiment: Real LLM — Groq GPT-OSS 120B, Linear topology
+experiment:
+  name: groq_gptoss120b_linear
+  topology: linear
+  agents: 5
+  agent_roles:
+    - orchestrator
+    - doc_retrieval
+    - email_drafting
+    - database_query
+    - code_execution
+  model: "groq:openai/gpt-oss-120b"
+  signal_type: static
+  cycles: 10
+  seed: 42
+  defenses: []

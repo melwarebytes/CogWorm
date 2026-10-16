@@ -1,0 +1,10 @@
+# CogWorm Experiment: Baseline — Hierarchical topology, no defenses
+experiment:
+  name: baseline_hierarchical
+  topology: hierarchical
+  agents: 7
+  model: mock
+  signal_type: static
+  cycles: 20
+  seed: 42
+  defenses: []

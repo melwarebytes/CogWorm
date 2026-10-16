@@ -1,0 +1,28 @@
+# CogWorm Experiment: Groq Llama 70B WITH all defenses — compare to baseline
+# Requirements: export GROQ_API_KEY="gsk_..."
+experiment:
+  name: groq_llama70b_defended
+  topology: linear
+  agents: 5
+  agent_roles:
+    - orchestrator
+    - doc_retrieval
+    - email_drafting
+    - database_query
+    - code_execution
+  model: "groq:llama-3.3-70b-versatile"
+  signal_type: static
+  cycles: 10
+  seed: 42
+  defenses:
+    - type: keyword_filter
+      id: keyword_filter
+      config:
+        type: keyword_filter
+
+    - type: provenance_check
+      id: provenance_check
+      config:
+        type: provenance_check
+        max_hops: 4
+        require_parent: true

@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Experiment outputs (regenerable)
+results/
+*.db
+
+# Secrets
+.env
+*.key
+
+# Pytest
+.pytest_cache/
+
+# Streamlit
+.streamlit/
+
+# Claude
+.claude/

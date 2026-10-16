@@ -1,0 +1,10 @@
+# CogWorm Experiment: Baseline — Hub-and-spoke topology, no defenses
+experiment:
+  name: baseline_hub_spoke
+  topology: hub_and_spoke
+  agents: 5
+  model: mock
+  signal_type: static
+  cycles: 20
+  seed: 42
+  defenses: []

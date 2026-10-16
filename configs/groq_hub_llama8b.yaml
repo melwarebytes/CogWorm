@@ -1,0 +1,17 @@
+# CogWorm Experiment: Real LLM — Groq Llama 3.1 8B (fast/cheap), Hub topology
+# Requirements: export GROQ_API_KEY="gsk_..."
+experiment:
+  name: groq_llama8b_hub
+  topology: hub_and_spoke
+  agents: 5
+  agent_roles:
+    - orchestrator
+    - doc_retrieval
+    - email_drafting
+    - database_query
+    - code_execution
+  model: "groq:llama-3.1-8b-instant"
+  signal_type: static
+  cycles: 10
+  seed: 42
+  defenses: []

@@ -1,0 +1,16 @@
+# CogWorm Experiment: Baseline — Linear topology, no defenses
+experiment:
+  name: baseline_linear
+  topology: linear
+  agents: 5
+  agent_roles:
+    - orchestrator
+    - doc_retrieval
+    - email_drafting
+    - database_query
+    - code_execution
+  model: mock
+  signal_type: static
+  cycles: 20
+  seed: 42
+  defenses: []

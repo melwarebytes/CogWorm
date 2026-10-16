@@ -1,0 +1,35 @@
+# CogWorm Experiment: Linear topology with ALL defenses enabled
+experiment:
+  name: defended_all_linear
+  topology: linear
+  agents: 5
+  agent_roles:
+    - orchestrator
+    - doc_retrieval
+    - email_drafting
+    - database_query
+    - code_execution
+  model: mock
+  signal_type: static
+  cycles: 20
+  seed: 42
+  defenses:
+    - type: keyword_filter
+      id: keyword_filter
+      config:
+        type: keyword_filter
+
+    - type: llm_tagger
+      id: llm_tagger
+      config:
+        type: llm_tagger
+        mode: mock
+        detection_accuracy: 0.85
+        seed: 42
+
+    - type: provenance_check
+      id: provenance_check
+      config:
+        type: provenance_check
+        max_hops: 4
+        require_parent: true

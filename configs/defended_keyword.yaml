@@ -1,0 +1,21 @@
+# CogWorm Experiment: Linear topology WITH keyword filter defense
+experiment:
+  name: defended_keyword_linear
+  topology: linear
+  agents: 5
+  agent_roles:
+    - orchestrator
+    - doc_retrieval
+    - email_drafting
+    - database_query
+    - code_execution
+  model: mock
+  signal_type: static
+  cycles: 20
+  seed: 42
+  defenses:
+    - type: keyword_filter
+      id: keyword_filter
+      name: Keyword Filter
+      config:
+        type: keyword_filter

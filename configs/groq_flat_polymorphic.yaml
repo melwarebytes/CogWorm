@@ -1,0 +1,15 @@
+experiment:
+  name: groq_gptoss20b_flat_polymorphic
+  topology: flat
+  agents: 5
+  agent_roles:
+    - orchestrator
+    - doc_retrieval
+    - email_drafting
+    - database_query
+    - code_execution
+  model: "groq:openai/gpt-oss-20b"
+  signal_type: polymorphic
+  cycles: 10
+  seed: 42
+  defenses: []

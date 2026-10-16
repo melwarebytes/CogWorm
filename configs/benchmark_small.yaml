@@ -1,0 +1,56 @@
+# CogWorm Small Benchmark: 3 topologies × 2 signals × 1 model × baseline + defended
+# This is the minimum viable benchmark for proving the pipeline
+experiments:
+  - name: bench_linear_static
+    topology: linear
+    agents: 5
+    model: mock
+    signal_type: static
+    cycles: 20
+    seed: 42
+    defenses: []
+
+  - name: bench_linear_templated
+    topology: linear
+    agents: 5
+    model: mock
+    signal_type: templated
+    cycles: 20
+    seed: 42
+    defenses: []
+
+  - name: bench_hier_static
+    topology: hierarchical
+    agents: 7
+    model: mock
+    signal_type: static
+    cycles: 20
+    seed: 42
+    defenses: []
+
+  - name: bench_hier_templated
+    topology: hierarchical
+    agents: 7
+    model: mock
+    signal_type: templated
+    cycles: 20
+    seed: 42
+    defenses: []
+
+  - name: bench_hub_static
+    topology: hub_and_spoke
+    agents: 5
+    model: mock
+    signal_type: static
+    cycles: 20
+    seed: 42
+    defenses: []
+
+  - name: bench_hub_templated
+    topology: hub_and_spoke
+    agents: 5
+    model: mock
+    signal_type: templated
+    cycles: 20
+    seed: 42
+    defenses: []
